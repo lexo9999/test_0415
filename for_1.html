@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<pre id="container"></pre>
+
+    <script>
+
+let output5 = '';
+let n = 15;
+
+// 위쪽
+for (let i = 1; i <= n; i++) {
+    for (let j = n; j > i; j--) {
+        output5 += ' ';
+    }
+    for (let k = 0; k < 2 * i - 1; k++) {
+        output5 += '*';
+    }
+    output5 += '\n';
+}
+
+// 아래쪽
+for (let i = n - 1; i >= 1; i--) {
+    for (let j = n; j > i; j--) {
+        output5 += ' ';
+    }
+    for (let k = 0; k < 2 * i - 1; k++) {
+        output5 += '*';
+    }
+    output5 += '\n';
+}
+
+const pyramidContainer = document.getElementById('container');
+container.textContent = output5;
+
+    </script>
+</body>
+</html>
